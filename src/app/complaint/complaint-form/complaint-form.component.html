@@ -1,0 +1,266 @@
+<div class="heading">Complaint Information</div>
+<form [formGroup]="complaintForm">
+  <div class="row mt-3 mx-3 field">
+    <div class="form-floating">
+      <textarea
+        type="textarea"
+        rows="3"
+        
+        style="height: 6rem"
+        class="form-control"
+        formControlName="description"
+        id="floatingInput"
+        placeholder="Description"
+      ></textarea>
+      <label class="label mx-3" for="floatingInput"
+        >Description of Complaint:Please type clear description of
+        complaint(e.g.,nature or type of complaint:car,mail
+        order,telemarketing,internet etc.)<span class="text-danger"
+          >*</span
+        ></label
+      >
+      <div
+        class="form-text text-danger error-msg"
+        *ngIf="Description.errors?.['required'] && (Description.dirty || Description.touched)"
+      >
+        Description is Required
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="date"
+          class="form-control"
+          max="newDate"
+          formControlName="purchaseDate"
+          id="floatingInput"
+          placeholder="Purchase Date"
+        />
+        <label class="label" for="floatingInput"
+          >Purchase Date<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="PurchaseDate.errors?.['required'] && (PurchaseDate.dirty || PurchaseDate.touched)"
+        >
+          Purchase Date is Required
+        </div>
+        <!-- <div class="form-text text-danger"
+
+            *ngIf="PurchaseDate.value.getTime() > ExpirationDate.value.getTime() && (PurchaseDate.dirty)">
+      
+            Purchase Date cannot be after Expiration Date 
+      
+          </div> -->
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="date"
+          max="2024-03-03"
+          onfocus="this.max=new Date().toISOString().split('T')[0]"
+          class="form-control"
+          formControlName="dateOccured"
+          id="floatingInput"
+          placeholder="Date Problem First Occured"
+        />
+        <label class="label" for="floatingInput"
+          >Date Problem First Occured<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="DateOccured.errors?.['required'] && (DateOccured.dirty || DateOccured.touched)"
+        >
+          Problem Occuring Date is Required
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div formArrayName="datesComplained">
+        <div
+          *ngFor="let dateControl of complaintDates; let i = index"
+          [formGroupName]="i"
+        >
+          <div class="form-floating dates">
+            <div class="d-flex row align-items-center">
+              <div class="col-md-11">
+                <div class="form-floating">
+                  <input
+                    type="date"
+                    class="form-control"
+                    max="2024-03-03"
+                    onfocus="this.max=new Date().toISOString().split('T')[0];"
+                    formControlName="date"
+                    id="floatingInput"
+                    placeholder="Date/s You Complained"
+                  />
+                  <label class="label" for="floatingInput"
+                    >Date/s You Complained<span class="text-danger"
+                      >*</span
+                    ></label
+                  >
+                </div>
+              </div>
+              <a
+                class="col-md-1"
+                *ngIf="i != 0"
+                type="button"
+                (click)="removeDate(i)"
+                ><i class="bx bx-trash"></i
+              ></a>
+            </div>
+            <div
+              class="form-text text-danger error-msg2"
+              *ngIf="complaintDates.at(i)?.get('date')?.errors?.['required'] && (complaintDates.at(i)?.get('date')?.dirty || complaintDates.at(i)?.get('date')?.touched)"
+            >
+              Date Complained is Required
+            </div>
+          </div>
+        </div>
+      </div>
+      <a type="button" (click)="addDate()"><i class="bx bx-plus-circle"></i></a>
+    </div>
+    
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="complaintFiler"
+          id="floatingInput"
+          placeholder="To Whom You Complained"
+        />
+        <label class="label" for="floatingInput"
+          >To Whom You Complained<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="ComplaintFiler.errors?.['required'] && (ComplaintFiler.dirty || ComplaintFiler.touched)"
+        >
+          Whom You Complained is Required
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="manufacturer"
+          id="floatingInput"
+          placeholder="Brand Name Or Manufacturer"
+        />
+        <label class="label" for="floatingInput"
+          >Brand Name Or Manufacturer<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="Manufacturer.errors?.['required'] && (Manufacturer.dirty || Manufacturer.touched)"
+        >
+          Manufacturer or Brand Name is Required
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="serialNumber"
+          id="floatingInput"
+          placeholder="Serial Number"
+        />
+        <label class="label" for="floatingInput"
+          >Serial Number<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="SerialNumber.errors?.['required'] && (SerialNumber.dirty || SerialNumber.touched)"
+        >
+          Serial Number is Required
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="date"
+          class="form-control"
+          formControlName="expirationDate"
+          id="floatingInput"
+          placeholder="Warranty Expiration Date"
+        />
+        <label class="label" for="floatingInput"
+          >Warranty Expiration Date<span class="text-danger">*</span></label
+        >
+        <div
+          class="form-text text-danger error-msg"
+          *ngIf="ExpirationDate.errors?.['required'] && (ExpirationDate.dirty || ExpirationDate.touched)"
+        >
+          Expiration Date is Required
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-10">
+      <label class="my-2" for="fileInput"
+        ><b>Upload supporting documents</b> (multilingual documents are
+        accepted)</label
+      >
+
+      <div class="uploadBtn">
+        <input
+          type="file"
+          class="form-control"
+          formControlName="supportingDocs"
+          (change)="onFileSelected($event)"
+          id="fileInput"
+          placeholder="Supporting Documents"
+        />
+        <div
+          class="pt-3 d-flex flex-row justify-content-center align-content-center"
+        >
+          <img src="assets/images/Union 63.svg" alt="Not Found" />
+          <span class="px-3">Upload PNG, JPG, XLSX, DOCX, PDF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="d-flex flex-row align-items-center justify-content-between mt-5 mx-4 buttons">
+    <div>
+        <button (click)="updateFormStepsByNumberAndNoProgress.emit(1)" class="btn back btn-lg mx-auto ">
+          <div class="backtxt d-flex flex-row justify-content-center align-items-center  ">
+          
+            <svg class="backicon" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+              <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#1F5760"/>
+            </svg>
+            
+            <span>Back</span>
+          </div>
+        </button>
+    </div>
+    <div >
+        <button class="btn btn-lg save" (click)="onSaveExit()"> 
+          <div class="savetxt d-flex flex-row justify-content-center align-items-center px-2">Save & Exit</div>
+        </button>
+       &nbsp;
+        <button class="btn btn-lg btn-next save" (click)="onSubmit()">
+          <div class="savetxt d-flex flex-row justify-content-between px-1 align-items-center"><span>Next </span>
+            <svg class="saveFront" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+            <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#ffffff"/>
+          </svg></div>
+        </button>
+    </div>
+</div>
+</form>

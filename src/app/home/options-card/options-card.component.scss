@@ -1,0 +1,21 @@
+
+.mycard {
+    width: 15rem;
+    height: 18.33rem;
+    background-color: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 13px 0px;
+    border: 0.0625rem solid #707070;
+    padding: 0rem 1rem;
+   position: relative;
+  }
+  .mycard > .mycard-header {
+    font: normal normal bold 22px/24px Helvetica;
+    padding-top: 1.2rem;
+  }
+  .mycard > .mycard-body {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding-top: 1rem;
+  }
+  

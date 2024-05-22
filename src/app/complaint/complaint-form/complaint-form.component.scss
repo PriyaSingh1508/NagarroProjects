@@ -1,0 +1,93 @@
+.heading{
+    text-align: center;
+    font: normal normal bold 38px/50px Helvetica;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    }
+    .label{
+    text-align: left;
+    font: normal normal normal 14px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #1F5760;
+    opacity: 1;
+    }
+    .back{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #1F5760;
+    border-radius: 6px;
+    opacity: 1;
+    }
+    .save{
+        background: #1F5760 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+    }
+    .savetxt{
+        text-align: center;
+    font: normal normal normal 22px/27px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    opacity: 1;
+    }
+    .backtxt{
+        text-align: center;
+    font: normal normal normal 22px/27px Helvetica Neue;
+    letter-spacing: 0px;
+    font-size: 1.2rem;
+    color: #1F5760;
+    opacity: 1;
+    }
+    .buttons{
+        padding-top: 5%;
+        padding-left: 2rem;
+    }
+    .dates{
+        margin-bottom: 2%;
+    }
+    .uploadBtn{
+      background-color: #F5F6F7;
+      color:#0A80FB;
+      width: 24.25rem;
+      height: 4.125rem;
+    }
+    .uploadBtn > input {
+      position: absolute;
+      width: 24.25rem;
+      height: 4.125rem;
+      opacity: 0;
+    }
+    .uploadBtn>*>img{
+      width: 1rem;
+      height: auto;
+    }
+    .error-msg{
+        position:absolute;
+      }
+      .col-md-4{
+        margin-bottom:1.2rem
+      }
+      .field{
+        margin-bottom:1.6rem
+      }
+      .error-msg2{
+        position:absolute;
+        padding-left:1rem;
+        z-index: -1;
+      }
+      
+
+      
+.saveFront {
+  margin-left: 2rem;
+}
+.saveBack {
+  margin-right: 2rem;
+  rotate: 180deg;
+}
+
+.backicon {
+  margin-right: 2rem;
+  rotate: 180deg;
+}

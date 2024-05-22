@@ -1,0 +1,52 @@
+<div class="row complaintforms">
+    <div class=" col-md-4 pt-5 sidebar ">
+       <div class="sidebar-heading px-5">{{leftPanelTitle}}</div>
+       <div style="white-space: pre-line" class="sidebar-info px-5 py-3 ">
+           {{leftPanelDescription}}
+       </div>
+       <div class="sidebar-image">
+           <img src="assets/images/Group 53823@2x.png" alt="Not Found">
+       </div>
+    </div>
+    <div class="col-md-8">
+
+        <div [hidden]="changeToForm"><app-file-complaint (toggleForm)="toggleForm($event)"></app-file-complaint></div>
+       <div [hidden]="!changeToForm" action="#" class="form">
+           <div class="d-flex justify-content-center align-items-center ">
+            <div class="progressbar">
+              <div class="progress" id="progress"></div>
+              <div
+                  class="progress-step progress-step-active"
+                  data-title="Consumer"
+                  (click)="navigateToStep(0)"
+              >
+              </div>
+              <div class="progress-step" data-title="Company" (click)="navigateToStep(1)"></div>
+              <div class="progress-step" data-title="Complaint" (click)="navigateToStep(2)"></div>
+              <div class="progress-step" data-title="Payment" (click)="navigateToStep(3)"></div>
+              <div class="progress-step" data-title="Review & Submit" (click)="navigateToStep(4)"></div>
+          </div>
+           </div>
+     
+           <!-- Steps -->
+           <div class="form-step form-step-active">
+            <app-consumer-form (toggleForm)="toggleForm($event)" (updateFormStepsByNumber)="updateFormStepsByNumber($event)"></app-consumer-form>
+           </div>
+           <div class="form-step ">
+            <app-company-form (updateFormStepsByNumber)="updateFormStepsByNumber($event)" (updateFormStepsByNumberAndNoProgress)="updateFormStepsByNumberAndNoProgress($event)"></app-company-form>
+           </div>
+           <div class="form-step">
+             <app-complaint-form (updateFormStepsByNumber)="updateFormStepsByNumber($event)" (updateFormStepsByNumberAndNoProgress)="updateFormStepsByNumberAndNoProgress($event)"></app-complaint-form>
+           </div>
+           <div class="form-step">
+             <app-payment-form (nextButtonClicked)="onNextButtonClick()" (updateFormStepsByNumber)="updateFormStepsByNumber($event)" (updateFormStepsByNumberAndNoProgress)="updateFormStepsByNumberAndNoProgress($event)"></app-payment-form>
+            </div>
+           <div class="form-step">
+              <app-review-and-submit (updateFormStepsByNumber)="updateFormStepsByNumber($event)" (updateFormStepsByNumberAndNoProgress)="updateFormStepsByNumberAndNoProgress($event)" #reviewAndSubmit></app-review-and-submit>
+           </div>
+        </div>
+         
+         
+         
+    </div>
+   </div>

@@ -1,0 +1,89 @@
+<!-- <div class="nav-bar-container1">
+  <div class="logo-inner">
+    <img src="/assets/images/Group 53780.svg" />
+  </div>
+  <div class="more" *ngIf="smallScreen">
+    <a href="javascript:void(0)" (click)="showMenu()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div
+    class="navWrapper"
+    [@toggleState]="morlink ? 'true' : 'false'"
+    *ngIf="menus && menus.length > 0"
+  >
+    <ul class="main-navigation" class="level-1">
+      <li *ngFor="let item of menus">
+        <a href="javascript:">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <dcp-lang-switcher></dcp-lang-switcher>
+  </div>
+</div> -->
+
+
+<div [hidden]="isLoggedIn()" class="navbar">
+  <div class="navbar-logo"><img src="../../../../assets/images/DCPlogo.png"></div>
+  <div class="navigation">
+
+      <div class="nav-list">
+          <a routerLink="/" (click)="selectTab('home')" [class.active]="selectedTab === 'home'" class="nav-item">Home</a>
+          <a routerLink="/my-complaints" (click)="selectTab('my-complaints')" [class.active]="selectedTab === 'my-complaints'" class="nav-item" *ngIf="isLoggedIn()">My Complaints</a>
+          <a routerLink="/file-complaint" (click)="selectTab('file-complaint')" [class.active]="selectedTab === 'file-complaint'"  class="nav-item">File a Complaint</a>
+          <a routerLink="/complaint-forms" (click)="selectTab('complaint-forms')" [class.active]="selectedTab === 'complaint-forms'"  class="nav-item">Complaint Forms</a>
+        
+          <a (click)="selectTab('hotline')" [class.active]="selectedTab==='hotline'" class="nav-item">Consumer Hotline</a>
+      </div>
+  </div>
+  <div class="search">
+      <div class="searchlogo">
+          <i class='bx bx-search'></i>
+          <!-- <img src="../../../../assets/images/Group 54102.svg"> -->
+      </div>
+      <div class="dropdown">
+          <div class="dropbtn">English<i class='bx bx-chevron-down'></i></div>
+          <div class="dropdown-content">
+              <a href="#">Hindi</a>
+              <a href="#">French</a>
+              <a href="#">Urdu</a>
+          </div>
+      </div>    
+      
+  </div>
+</div>
+<div [hidden]="!isLoggedIn()" class="navbar2">
+  <div class="nav-start">
+  <div class="navbar-logo"><img src="../../../../assets/images/Group 53780.svg"></div>
+  <div class="navigation mx-2">
+
+          <a routerLink="/" (click)="selectTab('home')" [class.active]="selectedTab === 'home'" class="nav-item2">Home</a>
+          <a routerLink="/my-complaints" (click)="selectTab('my-complaints')" [class.active]="selectedTab === 'my-complaints'" class="nav-item2">My Complaints</a>
+          <a routerLink="/file-complaint" (click)="selectTab('file-complaint')" [class.active]="selectedTab === 'file-complaint'"  class="nav-item2">File a Complaint</a>
+          <a routerLink="/complaint-forms" (click)="selectTab('complaint-forms')" [class.active]="selectedTab === 'complaint-forms'"  class="nav-item2">Complaint Forms</a>
+          <a (click)="selectTab('hotline')" [class.active]="selectedTab==='hotline'" class="nav-item2">Consumer Hotline</a>
+  </div>
+</div>
+  <div class="search">
+      <div class="searchlogo">
+          <img src="../../../../assets/images/Group 54102.svg">
+      </div>
+      <div class="searchlogo2">
+        <img src="../../../../assets/images/Group 53771.svg">
+    </div>
+      <div class="dropdown">
+          <div class="dropbtn2">English<i class='bx bx-chevron-down'></i></div>
+          <div class="dropdown-content">
+              <a href="#">Hindi</a>
+              <a href="#">French</a>
+              <a href="#">Urdu</a>
+          </div>
+      </div>    
+      
+  </div>
+</div>

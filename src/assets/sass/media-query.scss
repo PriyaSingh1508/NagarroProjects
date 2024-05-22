@@ -1,0 +1,65 @@
+
+/*@media only screen and (max-width: 1366px) {
+    body, html{
+        font-size: 9px;
+    }
+}*/
+
+/*iPad in vertical*/
+@media only screen and (max-width: 1023px) {
+    .section-left {width: 100%;}
+    .sideBarIPad{
+        position:absolute;
+        right: 0;
+        width:380px !important;
+        height: 100% !important;
+        z-index: 100;
+    }
+    .sideBarHandle{right:215px;}
+    .selection-menu .menu-container ul.menu-list li{display:inline-block;margin-right:1rem;}
+    .leftMenuColumn{float:none; width: 100%;}
+    .contentAfterLeftMenu{float:none; width:100%; padding-left:0; clear:both;}
+    
+    .heading-border span{ font-size: 1.4rem;}
+    .leftMenuColumn .leftSubMenu{left:0; clear: left; margin:0 0 1rem 0; width: 100%; display: inline-block; }
+    .leftMenuColumn .leftSubMenu li{float:left; border-left:none; margin-right: 1rem;}
+    .leftMenuColumn .leftSubMenu li a{width:auto; border-left:none;}
+    .leftMenuColumn .leftSubMenu li a span.text{width:auto; padding-right: .5rem;}
+    .leftMenuColumn .leftSubMenu li:hover{border-left: none;}
+    .leftMenuColumn .leftSubMenu li:hover a{border-left:none;}
+    .advance-filter div[class^=col]{padding:0;}
+    .advance-filter .input-filter{float: none;}
+    .section-right.sidebarFloat .pending-request.in-sidebar li{width:100%; margin-right: 0; }
+
+}
+
+@media (min-width: 768px){
+    .modal-dialog {width: 720px;}
+}
+
+/* CSS ONLY FOR IE 10+  */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .iePlantLoading{min-height: 570px;}
+    h3.headline3{line-height: 3.3rem;}
+    .heading-border h1{top:.3rem;}
+    .flex-container{
+        height: auto;
+        // min-height:650px;
+        .section-left{
+            min-height: calc(100vh - 115px);
+        }
+        .section-right{
+            min-height: calc(100vh - 115px);   
+        }
+    }
+}
+
+// CSS ONLY FOR FIREFOX 
+@-moz-document url-prefix() {
+    .heading-border h1{top:.3rem}
+    .highlight span{top:0;}
+}   
+
+@-ms-viewport{
+    width:auto!important; //to resolve IE scrollbar issue https://github.com/twbs/bootstrap/issues/18543
+}

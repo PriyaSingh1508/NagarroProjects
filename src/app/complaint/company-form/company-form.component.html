@@ -1,0 +1,165 @@
+<div class="heading">Company Information</div>
+<form [formGroup]="companyForm">
+<div class="row mt-3 mx-3">
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="company" id="floatingInput" placeholder="Company Or Seller Name" >
+            <label class="label" for="floatingInput">Company Or Seller Name<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="Company.errors?.['required'] && (Company.dirty || Company.touched)">
+      
+            Company is Required
+      
+          </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="representative" id="floatingInput" placeholder="Representative or Sales Person">
+            <label class="label" for="floatingInput">Representative or Sales Person<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="Representative.errors?.['required'] && (Representative.dirty || Representative.touched)">
+      
+            Representative is Required
+      
+          </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="streetAddress" id="floatingInput" placeholder="Street Address" >
+            <label class="label" for="floatingInput">Street Address<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="StreetAddress.errors?.['required'] && (StreetAddress.dirty || StreetAddress.touched)">
+      
+            Street Address is Required
+      
+          </div>
+          </div>
+    </div>
+</div>
+<div class="row mt-3 mx-3">
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="city" id="floatingInput" placeholder="City" >
+            <label class="label" for="floatingInput">City<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="City.errors?.['required'] && (City.dirty || City.touched)">
+      
+            City is Required
+      
+          </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <select class="form-select" formControlName="state" id="floatingSelect" aria-label="Floating label select example" >
+              <option *ngFor="let state of states" [value]="state.name">{{state.name}}</option>
+             
+            </select>
+            <label class="label" for="floatingSelect">State<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="State.errors?.['required'] && (State.dirty || State.touched)">
+      
+            State is Required
+      
+          </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" minlength="5" maxlength="5" formControlName="zipcode" id="floatingInput" placeholder="Zipcode" >
+            <label class="label" for="floatingInput">Zip Code<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="Zipcode.errors?.['required'] && (Zipcode.dirty || Zipcode.touched)">
+      
+            Zip Code is Required
+      
+          </div>
+          <div class="form-text text-danger error-msg"
+
+          *ngIf="(Zipcode.errors?.['pattern'] && (Zipcode.dirty || Zipcode.touched))||(Zipcode.errors?.['minlength'] && (Zipcode.dirty || Zipcode.touched))||(Zipcode.errors?.['maxlength'] && (Zipcode.dirty || Zipcode.touched))">
+    
+          Zip Code should be of 5 digits only
+    
+        </div>
+        
+          </div>
+    </div>
+</div>
+<div class="row mt-3 mx-3">
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" [mask]="phoneMask" class="form-control" formControlName="companyPhone" id="floatingInput" placeholder="Company Phone" >
+            <label class="label" for="floatingInput">Company Phone<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="CompanyPhone.errors?.['required'] && (CompanyPhone.dirty || CompanyPhone.touched)">
+      
+            Company Phone is Required
+      
+          </div>
+          <div class="form-text text-danger error-msg"
+
+          *ngIf="(CompanyPhone.errors?.['pattern'] && (CompanyPhone.dirty || CompanyPhone.touched))||(CompanyPhone.errors?.['minlength'] && (CompanyPhone.dirty || CompanyPhone.touched))||(CompanyPhone.errors?.['maxlength'] && (CompanyPhone.dirty || CompanyPhone.touched))">
+    
+          Phone can contain 10 digits only and cannot start with 0
+    
+        </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="url" class="form-control" formControlName="website" id="floatingInput" placeholder="Website" >
+            <label class="label" for="floatingInput">Website Address<span class="text-danger">*</span></label>
+            <div class="form-text text-danger error-msg"
+
+            *ngIf="Website.errors?.['required'] && (Website.dirty || Website.touched)">
+      
+            Website Address is Required
+      
+          </div>
+          <div class="form-text text-danger error-msg"
+
+            *ngIf="Website.errors?.['pattern'] && (Website.dirty || Website.touched)">
+      
+            Website Address is Invalid
+      
+          </div>
+          </div>
+    </div>
+    
+</div>
+<div class="d-flex flex-row align-items-center justify-content-between mt-5 mx-4 buttons">
+    <div>
+        <button (click)="updateFormStepsByNumberAndNoProgress.emit(0)" class="btn back btn-lg mx-auto ">
+          <div class="backtxt d-flex flex-row justify-content-center align-items-center  ">
+          
+            <svg class="backicon" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+              <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#1F5760"/>
+            </svg>
+            
+            <span>Back</span>
+          </div>
+        </button>
+    </div>
+    <div >
+        <button class="btn save" (click)="onSaveExit()"> 
+          <div class="savetxt d-flex flex-row justify-content-center align-items-center px-3 ">Save & Exit</div>
+        </button>
+       &nbsp;
+        <button class="btn btn-next save" (click)="onSubmit2()">
+          <div class="savetxt d-flex flex-row justify-content-between px-1 align-items-center"><span>Next </span>
+            <svg class="saveFront" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+            <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#ffffff"/>
+          </svg></div>
+        </button>
+    </div>
+</div>
+</form>

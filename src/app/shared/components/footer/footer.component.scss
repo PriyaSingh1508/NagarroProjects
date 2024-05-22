@@ -1,0 +1,57 @@
+$base-horizontal-margin: 6.75rem;
+$base-font-size: 0.75rem;
+
+
+.container-footer {
+  
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pre-footer{
+  width: 100vw;
+  background-color: #bbced0;
+  color: #111111;
+  font-weight: 700;
+  padding: 2rem 4rem;
+}
+
+.prefooter-heading{
+  font-size: 1.2rem;
+}
+
+.pre-line{
+  height: 3rem;
+  width: 2px;
+  color:#111111;
+  background-color: #111111;
+  margin: 0 2rem;
+}
+
+
+.main-footer{
+  background-color: #333333;
+  color:white;
+  padding: 2rem 4rem;
+  
+  width: 100vw;
+}
+
+.footer-img{
+  width: 6rem;
+  height: auto;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.lang{
+  padding-right: 2rem;
+  text-decoration: underline;
+}
+hr{
+  width: 100vw;
+  margin: 2rem 0;
+}

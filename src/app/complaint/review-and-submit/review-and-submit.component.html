@@ -1,0 +1,151 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="fw-bolder fs-3 text-center  ">
+            Review & Submit
+        </div>
+    </div>
+    <div class="consumer-form mt-4">
+    <div class="row">
+        <div class="col-md-6 fs-4 fw-bold ">1. Consumer Information</div>
+        <div class="col-md-6 d-flex justify-content-end  flex-row align-items-center "><a class="btn  text-decoration-none "(click)="updateFormStepsByNumberAndNoProgress.emit(0)"><i class='bx bxs-edit'></i>Edit</a></div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4"><p>Title<span class="fw-bold "><br/>{{consumer.title?consumer.title:"None"}} </span></p></div>
+        <div class="col-md-4"><p>Last Name<span class="fw-bold "><br/>{{consumer.lastName}}</span></p></div>
+        <div class="col-md-4"><p>First Name<span class="fw-bold "><br/>{{consumer.firstName}}</span></p></div>
+        <div class="col-md-4"><p>Street Address<span class="fw-bold "><br/>{{consumer.streetAddress}}</span></p></div>
+        <div class="col-md-4"><p>City<span class="fw-bold "><br/>{{consumer.city}}</span></p></div>
+        <div class="col-md-4"><p>State<span class="fw-bold "><br/>{{consumer.state}}</span></p></div>
+        <div class="col-md-4"><p>ZipCode<span class="fw-bold "><br/>{{consumer.zipcode}}</span></p></div>
+        <div class="col-md-4"><p>Mobile<span class="fw-bold "><br/>{{consumer.dayPhone}}</span></p></div>
+        <div class="col-md-4" *ngIf="consumer.evePhone"><p>Home Phone<span class="fw-bold "><br/>{{consumer.evePhone?consumer.evePhone:"None"}}</span></p></div>
+        <div class="col-md-4" *ngIf="consumer.fax"><p>Fax<span class="fw-bold "><br/>{{consumer.fax?consumer.fax:"None"}}</span></p></div>
+        <div class="col-md-4"><p> Email Address<span class="fw-bold "><br/>{{consumer.email}}</span></p></div>
+        <div class="row"><p>Have you ever Served in military?<span class="fw-bold "><br/>{{(consumer.servedInMilitary)?"Yes":"No"}}</span></p></div>
+        <div class="row"><p>Supporting Documents<span class="fw-bold "><br/>None</span></p></div>
+    </div>
+    </div>
+
+    <div class="company-form mt-4">
+        <div class="row">
+            <div class="col-md-6 fs-4 fw-bold ">2. Company Information</div>
+            <div class="col-md-6 d-flex justify-content-end  flex-row align-items-center "><a class="btn text-decoration-none "(click)="updateFormStepsByNumberAndNoProgress.emit(1)"><i class='bx bxs-edit'></i>Edit</a></div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-4"><p>Company or Seller<span class="fw-bold "><br/>{{company.company}} </span></p></div>
+            <div class="col-md-4"><p>Representative/Salesperson & Title<span class="fw-bold "><br/>{{company.representative}}</span></p></div>
+            <div class="col-md-4"><p>Street Address<span class="fw-bold "><br/>{{company.streetAddress}}</span></p></div>
+            <div class="col-md-4"><p>City<span class="fw-bold "><br/>{{company.city}}</span></p></div>
+            <div class="col-md-4"><p>State<span class="fw-bold "><br/>{{company.state}}</span></p></div>
+            <div class="col-md-4"><p>ZipCode<span class="fw-bold "><br/>{{company.zipcode}}</span></p></div>
+            <div class="col-md-4"><p> Website Address<span class="fw-bold "><br/>{{company.website}}</span></p></div>
+        </div>
+    </div>
+    <div class="complaint-form mt-4">
+        <div class="row">
+            <div class="col-md-6 fs-4 fw-bold ">3. Complaint Information</div>
+            <div class="col-md-6 d-flex justify-content-end  flex-row align-items-center "><a class="btn text-decoration-none "(click)="updateFormStepsByNumberAndNoProgress.emit(2)"><i class='bx bxs-edit'></i>Edit</a></div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12"><p>Description of Complaint: Please type a clear description of the complaint (e.g., nature or type of complaint: car, mail order, telemarketing, internet, etc)<span class="fw-bold "><br/>{{complaint.description}} </span></p></div>
+            <div class="col-md-4"><p>Date problem first occured<span class="fw-bold "><br/>{{complaint.dateOccured}}</span></p></div>
+            <div class="col-md-4"><p>Date(s) you complained to company<span class="fw-bold "><br/>{{complaint.datesComplained}}</span></p></div>
+            <div class="col-md-4"><p>To whom you complained<span class="fw-bold "><br/>{{complaint.complaintFiler}}</span></p></div>
+            <div class="col-md-4"><p>Brand Name or Manufacturer<span class="fw-bold "><br/>{{complaint.manufacturer}}</span></p></div>
+            <div class="col-md-4"><p>Serial Number<span class="fw-bold "><br/>{{complaint.serialNumber}}</span></p></div>
+            <div class="col-md-4"><p>Warranty Expiration Date<span class="fw-bold "><br/>{{complaint.expirationDate}}</span></p></div>
+            <div class="col-md-4"><p>Date Purchased<span class="fw-bold "><br/>{{complaint.purchaseDate}}</span></p></div>
+            <div class="row"><div class="col-md-6">
+                <p>Supporting Documents<span class="fw-bold "><br/>{{complaint.supportingDocs?complaint.supportingDocs:"None"}}</span></p>
+            </div></div>
+            
+        </div>
+    </div>
+    <div class="payment-form mt-4">
+        <div class="row">
+            <div class="col-md-6 fs-4 fw-bold ">4. Payment Information</div>
+            <div class="col-md-6 d-flex justify-content-end  flex-row align-items-center "><a class="btn text-decoration-none " style="color:#111111" (click)="updateFormStepsByNumberAndNoProgress.emit(3)"><i class='bx bxs-edit'></i>Edit</a></div>
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-md-12"><p>Have you already paid for the product or service?<span class="fw-bold "><br/>{{payment.paidForService?payment.paidForService:"No"}} </span></p></div>
+            <div *ngIf="payment.paidForService!=='No'" class="row">
+            <div class="col-md-4"><p>Method of payment<span class="fw-bold "><br/>{{payment.paymentMethod?payment.paymentMethod:"Unknown"}}</span></p></div>
+            <div class="col-md-4"><p>Amount in Dispute<span class="fw-bold "><br/>{{payment.amountinDispute?payment.amountinDispute:"None"}}</span></p></div>
+            <div class="row">
+                <p>Description of the Resolution you are Requesting (e.g., refund, credit, exchange or rebate) <br/><span class="fw-bold">{{payment.description?payment.description:"None"}}</span></p>
+            </div>
+            <div class="row">
+                <p>Have you contacted any other government agency to assist in resolving this complaint?<br/><span class="fw-bold">{{payment.contactedGovAgency?"Yes":"No"}}</span></p>
+            </div>
+            <div *ngIf="payment.contactedGovAgency==true">
+                <div class="row">
+                    <div class="col-md-4"><p>Agency Contacted<span class="fw-bold "><br/>{{payment.agencyContacted?payment.agencyContacted:"None"}} </span></p></div>
+        <div class="col-md-4"><p>Agency Contact Person<span class="fw-bold "><br/>{{payment.agencyContactPerson?payment.agencyContactPerson:"None"}}</span></p></div>
+        <div class="col-md-4"><p>Address<span class="fw-bold "><br/>{{payment.address?payment.address:"Unknown"}}</span></p></div>
+        <div class="col-md-4"><p>Assistance Received<span class="fw-bold "><br/>{{payment.assistanceReceived?payment.assistanceReceived:"None"}}</span></p></div>
+                </div>
+                <div class="row">
+                    <p>Have you contacted Attorney?<br/><span class="fw-bold">{{payment.contactedAttorney?payment.contactedAttorney:"False"}}</span></p>
+                </div>
+                <div class="row">
+                    <p>Court Action Pending?<br/><span class="fw-bold">{{payment.courtActionPending?payment.courtActionPending:"False"}}</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <p>Have you already paid for the product or service?<br/><span class="fw-bold">{{payment.paidForService?payment.paidForService:"No"}}</span></p>
+            </div>
+            <div  class="row">
+                <p>Supporting Documents<br/><span class="fw-bold">{{payment.supportingDocs?payment.supportingDocs:"None"}}</span></p>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="acknowledgement mt-4">
+        <div class="row">
+            <div class="col fs-4 fw-bold ">5. Acknowledgement & Submit</div>     
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="d-flex flex-row">
+                <div><input class="form-check-input" type="checkbox"  [(ngModel)]="isChecked"/></div>
+                <div class="justify-content-around  mx-2">In filing this form, I understand that the Division of Consumer Protection (DCP) is attempting to mediate my complaint. I also understand that if I have any questions concerning my legal rights or responsibilities, I should contact a private attorney. I hereby authorize the DCP to work with the appropriate government and private sector entities on my behalf, including requesting and reviewing appropriate documents, to attempt to resolve my dispute.<b> I have no objection to the contents of this complaint being forwarded to the business or service person the complaint is directed against. The above complaint is true and accurate to the best of my knowledge.</b><p class="fw-bold mt-3 fst-italic "> This document is subject to disclosure under the Freedom of Information Law. The person or firm you are complaining about will receive a copy of this complaint.</p></div>
+            </div>
+            
+        </div>
+        <div class="row">
+            
+            <re-captcha (resolved)="resolved($event)" siteKey="6Ld8I6EpAAAAAFdA4bGWOhHO1AdoiJJ51Ty--W9E"></re-captcha>
+        </div>
+    </div>
+    <div class="mt-5 d-flex flex-row justify-content-between align-items-center  buttons">
+        <div class="">
+          <button (click)="updateFormStepsByNumber.emit(3)" class="btn btn-lg btn-prev mx-auto back">
+            <div class="backtxt d-flex flex-row justify-content-between align-items-center px-3">
+                <svg class="backicon" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+                <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#1F5760"/>
+              </svg>
+              
+              <span>Back</span></div>
+          </button>
+        </div>
+        <div class="">
+          <button class="btn btn-lg save" (click)="onSaveExit()">
+            <div class="savetxt d-flex flex-row justify-content-center align-items-center px-3 ">
+               Save & Exit
+            </div>
+          </button>
+          &nbsp;
+          &nbsp;
+          <button  [disabled]="!captchaResolved" (click)="OnSubmit()" class="btn btn-lg save" type="submit">
+            <div class="savetxt d-flex flex-row justify-content-between align-items-center  px-3"><span>Submit</span> <img style="margin-left: 1rem;" src="../../../assets/images/Chevron.svg"></div>
+          </button>
+        </div>
+      </div>
+
+</div>

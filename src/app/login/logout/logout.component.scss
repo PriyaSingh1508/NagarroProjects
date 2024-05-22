@@ -1,0 +1,45 @@
+.logout-wrapper{
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    background-image:  linear-gradient(#66bdbb, #e6fbfb);
+}
+
+.container{
+    width: 35%;
+    height: fit-content;
+    padding: 20px;
+    margin: 10% auto;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #66bdbb;
+    box-shadow: 0 0 20px #66bdbb;
+
+}
+.logo{
+    width:fit-content;
+    margin: auto;
+}
+
+.status{
+    font-weight: bold;
+    font-size: large;
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.align-center{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: blue !important;
+    }
+}

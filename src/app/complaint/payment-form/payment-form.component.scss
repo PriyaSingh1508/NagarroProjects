@@ -1,0 +1,183 @@
+.heading {
+  text-align: center;
+  font: normal normal bold 38px/50px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.label {
+  text-align: left;
+  font: normal normal normal 14px/16px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #1f5760;
+  opacity: 1;
+ 
+}
+.checkbox {
+  text-align: left;
+  font: normal normal bold 20px/25px Helvetica Neue;
+  letter-spacing: 0px;
+  font-size: 1rem;
+  color: #000000;
+  opacity: 1;
+}
+.back {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #1f5760;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.save {
+  background: #1f5760 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+}
+.savetxt {
+  text-align: center;
+  font: normal normal normal 22px/27px Helvetica Neue;
+  letter-spacing: 0px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 1;
+}
+.backtxt {
+  text-align: center;
+  font: normal normal normal 22px/27px Helvetica Neue;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+  color: #1f5760;
+  opacity: 1;
+}
+.buttons {
+  padding-top: 5%;
+}
+
+
+.togglebtn {
+  background-color: #f5f6f7;
+  overflow: auto;
+  height: 2rem;
+}
+.togglebtn1 {
+  width: 4rem;
+  border-radius:  1.2rem 0 0 1.2rem ;
+}
+.togglebtn2 {
+  width: 4rem;
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+.togglebtn > span {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  display: block;
+}
+.togglebtn > input {
+  position: absolute;
+  width: 3rem;
+  height: 2rem;
+  opacity: 0;
+}
+
+.togglebtn > input:checked+span {
+  background-color: #05ac56;
+  color: #f7f7f7;
+}
+.togglebtn3 {
+    background-color: #f5f6f7;
+    overflow: auto;
+    height: 2rem;
+  }
+  
+  .togglebtn3 > span {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    display: block;
+  }
+  .togglebtn3 > input {
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    opacity: 0;
+  }
+  
+  .togglebtn3 > input:checked+span {
+    background-color: #05ac56;
+    color: #f7f7f7;
+  }
+
+  .togglebtn-4{
+    width: 10rem;
+    border-radius: 0 4rem 4rem 0;
+  }
+
+  .uploadBtn{
+    background-color: #F5F6F7;
+    color:#0A80FB;
+    width: 24.25rem;
+    height: 4.125rem;
+  }
+  .uploadBtn > input {
+    position: absolute;
+    width: 24.25rem;
+    height: 4.125rem;
+    opacity: 0;
+  }
+  .uploadBtn>*>img{
+    width: 1rem;
+    height: auto;
+  }
+  .error-msg{
+    position:absolute;
+  }
+  .col-md-4{
+    margin-bottom:1.2rem
+  }
+  .field{
+    margin-bottom:1.6rem
+  }
+  .togglebtn4 > span {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    display: block;
+  }
+  .togglebtn4 > input {
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    opacity: 0;
+  }
+  
+  .togglebtn4 > input:checked+span {
+    background-color: #05ac56;
+    color: #f7f7f7;
+  }
+  .togglebtn4 {
+    background-color: #f5f6f7;
+    overflow: auto;
+    height: 2rem;
+  }
+  
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .saveFront{
+    margin-left: 2rem;
+   }
+   .saveBack{
+    margin-right: 2rem;
+     rotate:180deg;
+   }
+
+   .backicon{
+    margin-right: 2rem;
+    rotate:180deg;
+   }

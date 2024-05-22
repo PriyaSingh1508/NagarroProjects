@@ -1,0 +1,107 @@
+.heading{
+text-align: center;
+font: normal normal bold 38px/50px Helvetica;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.label{
+text-align: left;
+font: normal normal normal 14px/16px Helvetica Neue;
+letter-spacing: 0px;
+color: #1F5760;
+opacity: 1;
+}
+.checkbox{
+    text-align: left;
+font: normal normal bold 20px/25px Helvetica Neue;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.back{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #1F5760;
+border-radius: 6px;
+opacity: 1;
+}
+.save{
+    background: #1F5760 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+}
+.savetxt{
+  font: normal normal normal 22px/27px Helvetica Neue;
+    text-align: center;
+letter-spacing: 0px;
+color: #FFFFFF;
+font-size: 1.2rem;
+opacity: 1;
+}
+
+.backtxt{
+    text-align: center;
+font: normal normal normal 22px/27px Helvetica Neue;
+letter-spacing: 0px;
+font-size: 1.2rem;
+color: #1F5760;
+opacity: 1;
+}
+.buttons{
+    padding-top: 5%;
+}
+.togglebtn {
+    background-color: #f5f6f7;
+    overflow: auto;
+    height: 2rem;
+  }
+  .togglebtn1 {
+    width: 4rem;
+    border-radius:  1.2rem 0 0 1.2rem ;
+  }
+  .togglebtn2 {
+    width: 4rem;
+    border-radius: 0 1.2rem 1.2rem 0;
+  }
+  
+  .togglebtn > span {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    display: block;
+  }
+  .togglebtn > input {
+    position: absolute;
+    width: 3rem;
+    height: 2rem;
+    opacity: 0;
+  }
+  
+  .togglebtn > input:checked+span {
+    background-color: #05ac56;
+    color: #f7f7f7;
+  }
+  // .row{
+  //   padding-bottom: 2rem;
+  //   margin-bottom: 2rem;
+  // }
+  .error-msg{
+    position:absolute;
+  }
+  .col-md-4{
+    margin-bottom:1.2rem
+  }
+  
+  
+  .saveFront{
+    margin-left: 2rem;
+   }
+   .saveBack{
+    margin-right: 2rem;
+     rotate:180deg;
+   }
+
+   .backicon{
+    margin-right: 2rem;
+    rotate:180deg;
+   }

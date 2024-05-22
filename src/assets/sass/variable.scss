@@ -1,0 +1,191 @@
+$SiemensSlab-Roman: "SiemensSlab-Roman";
+$prime: #009999;
+$link: #990000;
+$textColor: #333333;
+$error: #cc0000;
+$success: #647d2d;
+$warning: #ffb900;
+$default: #ccc;
+$highlightLink: #09a593;
+$darkbluish: #1f4e79;
+
+// $sms-light-blue:  #2387aa;
+// $sms-dark-gray: #2d373c;
+
+$background-color: #41aac8;
+
+$gray10: #d0d3da;
+$gray15: #999;
+$gray25: #6e6e6e;
+$brd-btm-a: #e5e6e8;
+$gray35: #e4e4e6;
+$gray45: #ddd;
+$gray50: #eff0f4;
+$gray55: #7a8189;
+$gray65: #c9d2d7;
+$gray75: #e6e6e6;
+$gray85: #dce1e5;
+$gray95: #e6e7e9;
+$colFirst: #c5d3d7;
+$black: #000;
+$black01: #0e1623;
+$white: #fff;
+$highlightBtn: #2882a0;
+$highlightBtnHover: #55a0b9;
+$darkOrange: #f0ad4e;
+
+$sms-dark-gray: #2d373c;
+$sms-light-blue: #2387aa;
+$sms-off-white: #ebf0f5;
+
+$sms-color01: #697882;
+$sms-placeholder: #788791;
+
+$sms-black: #000;
+$sms-white: #fff;
+$sms-std-background: #cdd9e1;
+$sms-light-gray: #f6f6f6;
+
+$link-heightligh: #3287aa;
+$sms-light-orange: #faa50a;
+
+$sms-dark-blue: #205760;
+$sms-info: #0f789b;
+$sms-dark-high-blue: #005578;
+$sms-links: #2387aa;
+
+$sms-light-medium-gray: #e7e7e7;
+
+$sms-hover: #c7c7c7;
+
+$sms-light-black: #3e3e3e;
+
+$sms-light-light-gray: #d8d8d8;
+
+$sms-dark-medium-gray: #979797;
+
+$sms-dark-dark-gray: #494949;
+
+$sms-disabled: #858585;
+
+$sms-disabledCtrl: #dfe6ed;
+
+$sms-error: #dc0000;
+
+$sms-borderColor: #cdd9e1;
+$sms-borderColor-dark: #727576;
+
+$sms-btn-orange-hover: #eb780a;
+
+$sms-lighten-gray: #cbcbcb;
+
+$sms-light-white: #f3f8f8;
+
+$sms-line-gray: #c6d1dc;
+
+$sms-line-light-gray: #dadada;
+
+$sms-widgets: #3c464b;
+
+//Forms  and alerts
+
+$panel-body-padding: 15px;
+
+//table
+$header-background: #879baa;
+
+$sms-success: #0a9b00;
+$sms-danger: #dc1f00;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$sms-siemensSans-Roman: "SiemensSans-Roman";
+$font-family-serif: $sms-siemensSans-Roman;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base: $sms-siemensSans-Roman;
+
+$font-size-base: 14px;
+$font-size-large: ceil(($font-size-base * 1.25)); /*18*/
+$font-size-exlarge: floor(($font-size-base * 2.15)); /*30px*/
+$font-size-medium-small: ceil(($font-size-base * 1.14)); /*16px*/
+$font-size-medium: ceil(($font-size-base * 1.4)); /*20px*/
+$font-size-medium: ceil(($font-size-base * 1.4)); /*20px*/
+$font-size-medium-lg: floor(($font-size-base * 1.6)); /*22px*/
+
+$font-size-h1: floor(($font-size-base * 2.6));
+$font-size-h2: floor(($font-size-base * 2.15));
+$font-size-h3: ceil(($font-size-base * 1.7));
+$font-size-h4: ceil(($font-size-base * 1.25));
+$font-size-h5: $font-size-base * 2;
+$font-size-h6: ceil(($font-size-base * 0.85));
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed: floor(($font-size-base * $line-height-base));
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family: inherit;
+$headings-font-weight: 500;
+$headings-line-height: 1.1;
+
+//.sprite{background:url(assets/images/sprite.png) no-repeat}
+//CSS for general png icon
+@mixin icon($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-image: $background;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+}
+//css for padding
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin paddingTopBottom($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin paddingAll($all) {
+  padding: $all;
+}
+
+@mixin buttonspadding() {
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+//CSS for general png icon
+@mixin icon($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background-image: $background;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+}

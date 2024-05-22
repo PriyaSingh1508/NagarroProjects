@@ -1,0 +1,38 @@
+<div class="wrapper-container">
+    <div class="ccontainer">
+        <div class="complaint-status">
+           <div id="status" [ngClass]="{ submitted: status === 'Submitted', approved: status === 'Approved','under-review': status === 'Under Review', draft: status === 'Draft' }"><span>{{status}}</span></div>
+       
+        <span *ngIf="status === 'Submitted' || status === 'Under Review' "  style="margin-right:1.8rem ;"><svg id="Group_54006" data-name="Group 54006" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.973" height="21.14" viewBox="0 0 18.973 21.14" >
+            <defs>
+            <clipPath id="clip-path">
+            <rect id="Rectangle_2607" data-name="Rectangle 2607" width="18.973" height="21.14" fill="#ec0001"/>
+            </clipPath>
+            </defs>
+            <g id="Group_47145" data-name="Group 47145" clip-path="url(#clip-path)">
+            <path id="Path_6538" data-name="Path 6538" d="M125.118,87.575h0a.8.8,0,0,0,0,1.593,2.768,2.768,0,0,1,2.765,2.765v4.032a.8.8,0,1,0,1.593,0v-4.07a4.344,4.344,0,0,0-4.359-4.32" transform="translate(-115.631 -81.454)" fill="#ec0001"/>
+            <path id="Path_6539" data-name="Path 6539" d="M18.176,17.433h-.965V10.441a7.733,7.733,0,0,0-6.928-7.669V.8A.8.8,0,1,0,8.69.8V2.774A7.761,7.761,0,0,0,3.829,5.194a7.66,7.66,0,0,0-2.067,5.246v6.992H.8a.8.8,0,0,0,0,1.594H7.1a2.4,2.4,0,0,0,4.772,0h6.3a.8.8,0,0,0,0-1.594m-2.558-6.992v6.992H3.355V10.441a6.131,6.131,0,1,1,12.262,0" fill="#ec0001"/>
+            </g>
+            </svg></span>
+        </div>
+        <div class="complaint-id">
+            <div class="first-row">
+                <p id="id">{{complaintId}}</p>
+    
+                <p id="title">{{complaintTitle}}</p>
+                <p id="day">{{daysBack}} day ago</p>
+            </div>
+           
+            <div class="last-row">
+                <p id="price">{{amount}}</p>
+                <img src="../../../assets/images/Subtraction 20.svg">
+            </div>
+           
+        </div>
+      
+      </div>
+    
+    
+</div>
+
+

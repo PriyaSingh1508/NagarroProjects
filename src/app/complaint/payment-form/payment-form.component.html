@@ -1,0 +1,306 @@
+<div class="heading">Payment Information</div>
+<form [formGroup]="paymentForm">
+  <div class="row mt-3 mx-3">
+    <div class="col-md-7 checkbox">Have You Paid For The Service</div>
+    <div class="col-md-5 d-flex flex-row">
+     
+      <label class="togglebtn3 togglebtn1" for="inlineRadio3"
+        ><input
+          type="radio"
+          name="paidForService"
+          id="inlineRadio3"
+          value="Yes"
+          checked
+          formControlName="paidForService"
+          
+        /><span>Yes</span></label
+      >
+     
+        <label class="togglebtn3" for="inlineRadio4"
+        ><input
+          type="radio"
+          name="paidForService"
+          id="inlineRadio4"
+          value="No"
+          formControlName="paidForService"
+         
+        /><span>No</span></label
+      >
+      <label class="togglebtn3 togglebtn-4" for="inlineRadio5"
+        ><input
+          type="radio"
+          name="paidForService"
+          id="inlineRadio5"
+          value="Partial"
+          formControlName="paidForService"
+          
+        /><span>Partial Purchase</span></label
+      >
+    </div>
+  </div>
+
+  <div *ngIf="PaidForService.value!=='No'">
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <select
+          class="form-select"
+          formControlName="paymentMethod"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+          
+        >
+          <option *ngFor="let opt of methods" [value]="opt">
+            {{ opt }}
+          </option>
+        </select>
+        <label class="label" for="floatingSelect">Method of Payment</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <!-- <span style="position: absolute; left: 0.3rem; top: 1.5rem;">$</span> -->
+        <input
+          type="text"
+          class="form-control"
+          formControlName="amountinDispute"
+          id="floatingInput"
+          mask="separator" prefix="$" thousandSeparator="," [dropSpecialCharacters]="false"
+          
+          placeholder="Amount In Dispute"
+          
+        />
+        <label class="label" for="floatingInput">Amount In Dispute</label>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-3 field">
+    <div class="form-floating">
+      <textarea
+      type="textarea"
+      rows="3"
+      
+      style="height: 6rem"
+      class="form-control"
+      formControlName="description"
+      id="floatingInput"
+      placeholder="Description"
+    ></textarea>
+      <label class="label mx-3" for="floatingInput"
+        >Description of the resolution you are
+        requesting(e.g.,refund,credit,exchange,rebate etc.)</label
+      >
+    </div>
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-9 checkbox">
+      Have You Contacted Any Government Agency to assit in resolving this
+      complaint?
+    </div>
+    <!-- <div class="col-md-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" formControlName="contactedGovAgency" id="inlineRadio1" value="true" [(ngModel)]="payment.contactedGovAgency">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" formControlName="contactedGovAgency" id="inlineRadio2" value="false" [(ngModel)]="payment.contactedGovAgency">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+
+        </div> -->
+    <div class="col-md-3 d-flex flex-row">
+      <label class="togglebtn togglebtn1" for="inlineRadio6"
+        ><input
+          type="radio"
+          name="contactedGovAgency"
+          id="inlineRadio6"
+          value="true"
+         
+          formControlName="contactedGovAgency"
+          
+        /><span>Yes</span></label
+      >
+
+      <label class="togglebtn togglebtn2" for="inlineRadio7"
+        ><input
+          type="radio"
+          name="contactedGovAgency"
+          id="inlineRadio7"
+          value="false"
+          formControlName="contactedGovAgency"
+          
+        /><span>No</span></label
+      >
+    </div>
+  </div>
+  <div *ngIf="ContactedGov.value==='true'">
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="agencyContacted" id="floatingInput" placeholder="Agency Contacted" >
+            <label class="label" for="floatingInput">Agency Contacted</label>
+            <!-- <div class="form-text text-danger error-msg"
+
+            *ngIf="Company.errors?.['required'] && (Company.dirty || Company.touched)">
+      
+            Company is Required
+      
+          </div> -->
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="agencyContactPerson" id="floatingInput" placeholder="Agency Contact Person">
+            <label class="label" for="floatingInput">Agency Contact Person</label>
+            <!-- <div class="form-text text-danger error-msg"
+
+            *ngIf="Representative.errors?.['required'] && (Representative.dirty || Representative.touched)">
+      
+            Representative Or Sales Person is Required
+      
+          </div> -->
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="address" id="floatingInput" placeholder="Address" >
+            <label class="label" for="floatingInput">Address</label>
+            <!-- <div class="form-text text-danger error-msg"
+
+            *ngIf="StreetAddress.errors?.['required'] && (StreetAddress.dirty || StreetAddress.touched)">
+      
+            Street Address is Required
+      
+          </div> -->
+          </div>
+    </div>
+</div>
+<div class="row mt-3 mx-3">
+  <div class="col-md-4">
+    <div class="form-floating">
+      <input type="text" class="form-control" formControlName="assitanceReceived" id="floatingInput" placeholder="Assistance Received" >
+      <label class="label" for="floatingInput">Assitance Received</label>
+      <!-- <div class="form-text text-danger error-msg"
+
+      *ngIf="Company.errors?.['required'] && (Company.dirty || Company.touched)">
+
+      Company is Required
+
+    </div> -->
+    </div>
+
+  </div>
+</div>
+<div class="row mt-3 mx-3">
+  <div class="col-md-9 checkbox">
+   Have You Contacted Attorney?
+  </div>
+
+  <div class="col-md-3 d-flex flex-row">
+    <label class="togglebtn4 togglebtn1" for="inlineRadio6"
+      ><input
+        type="radio"
+        name="contactedAttorney"
+        id="inlineRadio6"
+        value="true"
+       
+        formControlName="contactedAttorney"
+        
+      /><span>Yes</span></label
+    >
+
+    <label class="togglebtn4 togglebtn2" for="inlineRadio7"
+      ><input
+        type="radio"
+        name="contactedAttorney"
+        id="inlineRadio7"
+        value="false"
+        formControlName="contactedAttorney"
+        
+      /><span>No</span></label
+    >
+  </div>
+</div>
+<div class="row mt-3 mx-3">
+  <div class="col-md-9 checkbox">
+   Court Action Pending?
+  </div>
+
+  <div class="col-md-3 d-flex flex-row">
+    <label class="togglebtn4 togglebtn1" for="inlineRadio6"
+      ><input
+        type="radio"
+        name="courtActionPending"
+        id="inlineRadio6"
+        value="true"
+       
+        formControlName="courtActionPending"
+        
+      /><span>Yes</span></label
+    >
+
+    <label class="togglebtn4 togglebtn2" for="inlineRadio7"
+      ><input
+        type="radio"
+        name="courtActionPending"
+        id="inlineRadio7"
+        value="false"
+        formControlName="courtActionPending"
+        
+      /><span>No</span></label
+    >
+  </div>
+</div>
+</div>
+
+  <div class="row mt-3 mx-3">
+    
+    <div class="col-md-10">
+      <label class="my-2" for="fileInput"
+      ><b>Upload supporting documents</b> (multilingual documents are accepted)</label>
+      
+      <div class="uploadBtn"
+        ><input
+        type="file"
+        class="form-control"
+        formControlName="supportingDocs"
+        (change)="onFileSelected($event)"
+        id="fileInput"
+        placeholder="Supporting Documents"
+          
+        /><div class="pt-3 d-flex flex-row justify-content-center align-content-center " ><img src="assets/images/Union 63.svg" alt="Not Found"> <span class="px-3">Upload PNG, JPG, XLSX, DOCX, PDF</span></div></div
+      >
+    </div>
+  </div>
+</div>
+
+  
+
+  <div class="d-flex flex-row align-items-center justify-content-between mt-5 mx-4 buttons">
+    <div>
+        <button (click)="updateFormStepsByNumberAndNoProgress.emit(2)" class="btn back btn-lg mx-auto ">
+          <div class="backtxt d-flex flex-row justify-content-center align-items-center  ">
+          
+            <svg class="backicon" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+              <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#1F5760"/>
+            </svg>
+            
+            <span>Back</span>
+          </div>
+        </button>
+    </div>
+    <div >
+        <button class="btn save" (click)="onSaveExit()"> 
+          <div class="savetxt d-flex flex-row justify-content-center align-items-center px-3 ">Save & Exit</div>
+        </button>
+       &nbsp;
+        <button class="btn btn-next save" (click)="onSubmit()">
+          <div class="savetxt d-flex flex-row justify-content-between px-1 align-items-center"><span>Next </span>
+            <svg class="saveFront" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+            <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#ffffff"/>
+          </svg></div>
+        </button>
+    </div>
+</div>
+</form>

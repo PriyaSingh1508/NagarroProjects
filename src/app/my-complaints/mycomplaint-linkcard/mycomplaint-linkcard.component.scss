@@ -1,0 +1,21 @@
+
+.informartion-card {
+  font-family: 'sans-serif';
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  background: #daf1f5 0% 0% no-repeat padding-box;
+  border-radius: 13px 13px 0px 0px;
+  opacity: 1;
+}
+.informartion-card > img{
+  padding-right:1rem ;
+  height: 2.4rem;
+}
+.informartion-card >span{
+  font-size: 1rem;
+}

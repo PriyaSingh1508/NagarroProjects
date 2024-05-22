@@ -1,0 +1,50 @@
+<!-- <div class="title-bar">
+  <div class="logo-inner">
+    <img src="/assets/images/Group 53780.svg" />
+  </div>
+  <div class="pull-right user-details clearfix">
+    <div></div>
+    <ul class="userDtatils" *ngIf="isuserdrpdwn">
+
+            <li><a href="javascript:" routerLink="/faq">{{'faq' | translate}}</a></li>
+            <li><a href="javascript:" routerLink="/technicalHelpAndSupport">{{'technicalHelpAndSupport' | translate}}</a></li>
+            <li><a [attr.href]="infoMailTo" class="contactUser"><img src="/assets/images/contact.gif" />
+                    {{'contact'| translate}} </a></li>
+            <li>
+                <sfs-lang-switcher></sfs-lang-switcher>
+            </li>
+            <li>
+                <sfs-user-info></sfs-user-info>
+            </li>
+
+        </ul>
+  </div>
+</div> -->
+
+<div class="pre-nav">
+  <div class="left-box">
+
+      <img src="../../../../assets/images/newyorkstate.png" alt="newyorkstate">
+      <div> Department of state</div>
+  </div>
+  <div class="right-box">
+      <div class="share">
+          <div> SHARE</div>
+          <i class='bx bxs-envelope'></i>
+          <i class='bx bxl-facebook'></i>
+          <i class='bx bxl-twitter'></i>
+      </div>
+      <!-- <div class="login">Login</div> -->
+      <!-- <div class="login"><a routerLink="/login">Login</a></div> -->
+      
+    <div class="login" *ngIf="!isLoggedIn() ">
+      <a routerLink="/login">Login</a>
+    </div>
+
+    <div  *ngIf="isLoggedIn()">
+      <button (click)="logout()" id="logout" routerLink="/login">Logout</button>
+    </div>
+
+  </div>
+
+</div>

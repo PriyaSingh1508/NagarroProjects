@@ -1,0 +1,30 @@
+[
+   {
+    "status": "Submitted",
+    "complaintId": "Complaint #DGS",
+    "complaintTitle":"DCP Mediation",
+    "daysBack":1,
+    "amount":"$5048"
+   },
+   {
+    "status": "Under Review",
+    "complaintId": "Complaint #OPM12789",
+    "complaintTitle":"Overcharging or Price Manipulation",
+    "daysBack":1,
+    "amount":"$1125"
+   },
+   {
+    "status": "Draft",
+    "complaintId": "Draft",
+    "complaintTitle":"Scam Complaint",
+    "daysBack":1,
+    "amount":"$1125"
+   },
+   {
+    "status": "Approved",
+    "complaintId": "Complaint #CSM12123",
+    "complaintTitle":"Complaint not subject to mediation",
+    "daysBack":1,
+    "amount":"Car Repair"
+   }
+]

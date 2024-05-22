@@ -1,0 +1,297 @@
+<div class="heading">Consumer Information</div>
+<form  #form="ngForm">
+    <div class="row mt-3 mx-3">
+      <div class="col-md-4">
+        <div class="form-floating">
+          <select
+            class="form-select"
+            name="title"
+            id="floatingSelect"
+            aria-label="Floating label select example"
+            [(ngModel)]="consumer.title"
+          >
+            
+            <option *ngFor="let title of titles" [value]="title">
+              {{ title }}
+            </option>
+          </select>
+          <label class="label" for="floatingSelect">Title</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            id="floatingInput"
+            placeholder="Last Name"
+            [(ngModel)]="consumer.lastName"
+            required
+            #lastname="ngModel"
+          />
+          <label class="label" for="floatingInput"
+            >Last Name <span class="text-danger">*</span></label
+          >
+          <div class="form-text text-danger error-msg" *ngIf=" !lastname.value && lastname!.errors?.['required'] && (lastname.touched||lastname.dirty)">Last Name is Required</div>
+        </div>
+        
+      </div>
+      <div class="col-md-4">
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            id="floatingInput"
+            placeholder="First Name"
+            [(ngModel)]="consumer.firstName"
+            required
+            #firstname="ngModel"
+          />
+          <label class="label" for="floatingInput"
+            >First Name <span class="text-danger">*</span></label
+          >
+          <div class="form-text text-danger error-msg" *ngIf=" !firstname.value && firstname!.errors?.['required'] && (firstname.touched||firstname.dirty)">First Name is Required</div>
+        </div>
+      </div>
+  
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="streetAddress"
+          id="floatingInput"
+          placeholder="Street Address"
+          [(ngModel)]="consumer.streetAddress"
+          required
+          #street="ngModel"
+        />
+        <label class="label" for="floatingInput"
+          >Street Address<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !street.value && street!.errors?.['required'] && (street.touched||street.dirty)">Street Address is Required</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="city"
+          id="floatingInput"
+          placeholder="City"
+          [(ngModel)]="consumer.city"
+          required
+          #city="ngModel"
+        />
+        <label class="label" for="floatingInput"
+          >City<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !city.value && city!.errors?.['required'] && (city.touched||city.dirty)">City is Required</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <select
+          class="form-select"
+          name="state"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+          [(ngModel)]="consumer.state"
+          required
+          #state="ngModel"
+        >
+          <option *ngFor="let state of states" [value]="state.name">
+            {{ state.name }}
+          </option>
+        </select>
+        <label class="label" for="floatingSelect"
+          >State<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !state.value && state!.errors?.['required'] &&( state.touched||state.dirty)">State is Required</div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="zipcode"
+          id="floatingInput"
+          placeholder="Zipcode"
+          [(ngModel)]="consumer.zipcode"
+          required
+          maxlength="5"
+          minlength="5"
+          [pattern]="zippattern"
+          #zipcode="ngModel"
+          
+                 
+        />
+        <label class="label" for="floatingInput"
+          >Zip Code<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !zipcode.value && zipcode!.errors?.['required'] && (zipcode.touched||zipcode.dirty)">Zip Code is Required</div>
+        <div class="form-text text-danger error-msg" *ngIf="(zipcode!.errors?.['minlength'] && (zipcode.touched||zipcode.dirty))||(zipcode!.errors?.['maxlength'] && (zipcode.touched||zipcode.dirty))||(zipcode!.errors?.['pattern'] && (zipcode.touched||zipcode.dirty))">Zip Code can contain 5 digits only  </div>
+        
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="dayPhone"
+          id="floatingInput"
+          placeholder="Enter Mobile"
+          [(ngModel)]="consumer.dayPhone"
+          [mask]="phoneMask"
+          [pattern]="phonepattern"
+          required
+         
+          
+          #phone="ngModel"
+        />
+        <label class="label" for="floatingInput"
+          >Mobile<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !phone.value && phone!.errors?.['required'] && (phone.touched|| phone.dirty)">Mobile is Required</div>
+        <div class="form-text text-danger error-msg" *ngIf="(phone!.errors?.['pattern'] && (phone.touched|| phone.dirty))">Mobile can contain 10 digits & can't start with 0 </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="evePhone"
+          id="floatingInput"
+          placeholder="Enter Home Phone"
+          #eve="ngModel"
+          [pattern]="phonepattern"
+          [mask]="phoneMask"
+          [(ngModel)]="consumer.evePhone"
+        />
+        <label class="label" for="floatingInput">Home Phone</label>
+        
+        <div class="form-text text-danger error-msg" *ngIf=" (eve!.errors?.['pattern'] && (eve.touched|| eve.dirty))">Home Phone can contain 10 digits and can't start with 0</div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 mx-3">
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          name="fax"
+          id="floatingInput"
+          placeholder="Fax"
+          [(ngModel)]="consumer.fax"
+        />
+        <label class="label" for="floatingInput">Fax</label>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          id="floatingInput"
+          placeholder="Email"
+          [(ngModel)]="consumer.email"
+          required
+          email
+          #email="ngModel"
+        />
+        <label class="label" for="floatingInput"
+          >Email Address<span class="text-danger">*</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !email.value && email!.errors?.['required'] && email.touched">Email Address is Required</div>
+        <div class="form-text text-danger error-msg" *ngIf=" email!.errors?.['email'] && email.touched">Email Address is Invalid</div>
+      </div>
+    </div>
+  </div>
+  <!-- [class.has-error]="military.touched && military.invalid" -->
+  <div class="row mt-3 mx-3">
+    <div class="col-md-9 checkbox">
+      Have You Ever Served in Military?<span class="text-danger">*</span>
+    </div>
+    <div class="col-md-3 d-flex flex-row ">
+    
+        <label class="togglebtn togglebtn1" for="inlineRadio1"
+          ><input
+            type="radio"
+            name="servedInMilitary"
+            id="inlineRadio1"
+            required
+            #military="ngModel"
+            value="Yes"
+            [(ngModel)]="consumer.servedInMilitary"
+            
+            
+          /><span>Yes</span></label
+        >
+      
+   
+        <label class="togglebtn togglebtn2" for="inlineRadio2"
+          ><input
+            type="radio"
+            name="servedInMilitary"
+            id="inlineRadio2"
+            #military="ngModel"
+            required
+            value="No"
+            [(ngModel)]="consumer.servedInMilitary"
+            
+            
+           
+            
+          /><span>No</span></label
+        >
+        <div class="form-text text-danger error-msg" *ngIf=" !military.value && military!.errors?.['required'] && military.touched">Checkbox is Required</div>
+        
+     
+    </div>
+    <!-- <div class="form-text text-danger" >This field is Required to select</div> -->
+  </div>
+  <div class="d-flex flex-row align-items-center justify-content-between mt-5 mx-4 buttons">
+    <div >
+      <button (click)="this.toggleForm.emit(false)" class="btn btn-lg mx-auto back">
+        <div class="backtxt d-flex flex-row justify-content-center align-items-center  ">
+          
+          <svg class="backicon" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+            <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#1F5760"/>
+          </svg>
+          
+          <span>Back</span>
+        </div>
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-lg save" (click)="onSaveExit()">
+        <div class="savetxt d-flex flex-row justify-content-between px-3 align-items-center">
+          <span>Save & Exit</span> 
+        </div>
+      </button>
+      &nbsp;
+      <!-- [disabled]="!consumerForm.valid" -->
+      <button id="next1" class="btn btn-lg mx-auto save btn-next"  (click)="onSubmit()">
+        <div class="savetxt d-flex flex-row justify-content-between px-1 align-items-center"><span>Next </span>
+          <svg class="saveFront" xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+          <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="#ffffff"/>
+        </svg></div>
+      </button>
+    </div>
+   
+      
+    </div>
+  </form>
+   

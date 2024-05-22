@@ -1,0 +1,82 @@
+$primary: #3d727b;
+$secondary: #205760;
+$base-horizontal-margin: 6.75rem;
+$base-font-size: 0.75rem;
+$primary-yellow:#E8AA42;
+.hero{
+    height: 100%;
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0 0 $base-horizontal-margin;
+}
+.hero-left,.hero-right{
+    margin:7.6875rem 0;
+    margin:6rem 0;
+}
+.hero-title{
+    color:white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.hero-left>p{
+    color: white;
+    margin-top:1.5rem;
+}
+
+.btn-group{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
+
+.btn-group>*{
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+.btn1,.btn2{
+ font-size: 1rem;
+ padding: 1rem 1rem 1rem 2rem;
+ border:none;
+ border-radius: 2rem;
+ display: flex;
+ flex-direction:row;
+ align-items: center;
+ justify-content: space-between;
+
+}
+.btn1>img,.btn2>img{
+    margin-left: 2rem;
+}
+.btn2{
+    background-color: $primary-yellow;
+}
+.hero-right>img{
+    height: 20rem;
+    float: right !important;
+    transform: translate(4rem,0);
+}
+
+.Explore{
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+
+}
+
+.Explore>p{
+    color: white;
+}
+.vertical-line{
+    background-color: $primary-yellow;
+    height: 4rem;
+    width: 1px;
+}

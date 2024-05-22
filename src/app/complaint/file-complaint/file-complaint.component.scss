@@ -1,0 +1,204 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:50rem;
+    overflow:hidden;
+
+    
+}
+.sidebar{
+    flex:1;
+    background: #F5F6F7 0% 0% no-repeat padding-box;
+    opacity: 1; 
+    padding-left: 3%;
+    padding-right:1%;
+    padding-top:3%;
+    
+    
+    
+}
+.sidebar-heading{
+    text-align: left;
+    font: normal normal normal 28px/40px 'Custom Font';
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    padding-top: 10%;
+    font-size:large;
+
+    padding-bottom:5%;
+}
+.sidebar-info{
+    text-align: left;
+    font: normal normal normal 18px/22px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    padding-bottom: 3%;
+    
+}
+.sidebar-image{
+    background: transparent url('/assets/images/Group 53809.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-top: 40%;
+}
+.content{
+    flex:3;
+    margin:1rem,1rem,1rem,1rem;
+    padding: 3rem 4rem;
+    
+   
+}
+.content-heading{
+    text-align: center;
+    font: normal normal bold 38px/50px Arial;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    font-size:xx-large;
+}
+.content-info{
+    text-align: center;
+    font: normal normal normal 20px/23px Arial;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+}
+.card-container{
+    padding-top: 10%;
+   display:flex;
+   justify-content: space-between;
+   align-content: center;
+
+}
+.card{
+    padding: 2rem 1rem;
+    width: 45%;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+    margin-right:1.5rem;
+    min-height: 8rem;
+    background: #ECFAFB 0% 0% no-repeat padding-box;
+    border-radius: 2rem;
+    opacity: 1;
+    text-decoration: none;
+    // position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.card-img{
+    position: relative;
+}
+.card-img> img{
+    position:absolute;
+    left: -20%;
+    top: -10%;
+    width: 90%;
+  float: left;
+  background: transparent url('/assets/images//Group53836.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+
+.card-content {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+      }
+.card-content h3 {
+        margin-top: 0;
+        text-align: left;
+        
+        font: normal normal bold 24px/32px Arial;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+      }
+      .card:hover{
+        transform: scale(1.1);
+      }
+.line {
+    border: 1px #4a4a4a solid;
+    width: 100%;
+    opacity: 0.5;
+}
+.content-heading2{
+    text-align: center;
+font: normal normal bold 28px/50px Arial;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.status{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right:5%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   
+
+}
+.check{
+    
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.track button{
+    padding-left: 2rem;
+    background: #1F5760 0% 0% no-repeat padding-box;
+border-radius: 6px;
+opacity: 1;
+
+}
+.track button .text{
+    text-align: center;
+font: normal normal normal 1.2rem Helvetica Neue;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 0.9;
+}
+.status-heading{
+    margin-bottom: 2rem;
+    text-align: center;
+font: normal normal normal 20px/23px Arial;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+}
+.search{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+background: url("/assets/images/Group 54102.svg") no-repeat right;
+background-size: 1rem;
+border: 1px solid #B9B9B9;
+border-radius: 0.2rem;
+opacity: 1;
+height:2rem;
+background-position-x: 95%;
+}
+.search::placeholder{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: #000000;
+    font: normal normal normal 14px Helvetica Neue;
+}
+.form{
+    box-sizing: border-box;
+}
+
+.vl {
+    padding-left: 2%;
+  border-left: 0.2rem solid #F4F4F4;
+        height: 5rem;
+        padding-right: 2%;
+}
+
+
+
+
+.saveFront{
+    margin-left: 2rem;
+   }

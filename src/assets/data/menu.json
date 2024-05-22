@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "label": "Home",
+      "route": "home"
+    },
+    {
+      "id": 2,
+      "label": "My Complaints",
+      "route": "my-complaints"
+    },
+    {
+      "id": 3,
+      "label": "File a Complaint",
+      "route": "file-complaint"
+    },
+    {
+      "id": 4,
+      "label": "Complaint Forms",
+      "route": "complaint-forms"
+    },
+    {
+      "id": 5,
+      "label": "Consumer Hotline",
+      "route": "consumer-hotline"
+    }
+  ]
+}

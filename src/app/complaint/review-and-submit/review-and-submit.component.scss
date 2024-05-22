@@ -1,0 +1,47 @@
+.back {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #1f5760;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .save {
+    background: #1f5760 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    opacity: 1;
+  }
+  .savetxt {
+    text-align: center;
+    font: normal normal normal 22px/27px Helvetica Neue;
+    letter-spacing: 0px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 1;
+  }
+  .backtxt {
+    text-align: center;
+    font: normal normal normal 22px/27px Helvetica Neue;
+    font-size: 1.2rem;
+    letter-spacing: 0px;
+    color: #1f5760;
+    opacity: 1;
+  }
+  .buttons {
+    padding-top: 5%;
+  }
+
+
+  .form-check-input{
+    border:2px solid #1f5760;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .form-check-input:checked{
+    background-color: #1f5760;
+  }
+
+
+  
+  .backicon{
+    margin-right: 2rem;
+    rotate:180deg;
+   }

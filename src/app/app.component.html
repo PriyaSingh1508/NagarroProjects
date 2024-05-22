@@ -1,0 +1,21 @@
+<!-- <div>This DCP Application</div> -->
+
+<div class="body-container">
+  <div class="header">
+    <dcp-titlebar></dcp-titlebar>
+    <div>
+      <dcp-navbar [selectedTab]="selectedTab" class="topHeader"></dcp-navbar>
+    </div>
+  </div>
+
+  <div class="body-style">
+    <div class="rWraper clearfix">
+      <router-outlet></router-outlet>
+    
+    </div>
+  </div>
+
+  <div id="footer">
+    <dcp-footer></dcp-footer>
+  </div>
+</div>

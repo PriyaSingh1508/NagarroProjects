@@ -1,0 +1,64 @@
+.heading {
+  text-align: center;
+  font: normal normal bold 38px/50px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.label {
+  text-align: left;
+  font: normal normal normal 14px/16px Helvetica Neue;
+  letter-spacing: 0px;
+  color: #1f5760;
+  opacity: 1;
+}
+.back {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #1f5760;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.save {
+  background: #1f5760 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+}
+.savetxt {
+  text-align: center;
+  font: normal normal normal 22px/27px Helvetica Neue;
+  letter-spacing: 0px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  opacity: 1;
+}
+.backtxt {
+  text-align: center;
+  font: normal normal normal 22px/27px Helvetica Neue;
+  letter-spacing: 0px;
+  font-size: 1.2rem;
+  color: #1f5760;
+  opacity: 1;
+}
+.buttons {
+  padding-top: 5%;
+}
+.error-msg {
+  position: absolute;
+}
+.col-md-4 {
+  margin-bottom: 1.2rem;
+}
+
+.saveFront {
+  margin-left: 2rem;
+}
+.saveBack {
+  margin-right: 2rem;
+  rotate: 180deg;
+}
+
+.backicon {
+  margin-right: 2rem;
+  rotate: 180deg;
+}

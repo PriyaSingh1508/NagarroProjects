@@ -1,0 +1,16 @@
+<form class="lang">
+  <span><img src="/assets/images/language.gif" /></span>
+  <mat-form-field>
+    <mat-select
+      id="ddlLanguage"
+      ngDefaultControl
+      [(ngModel)]="selectedLanguageCode"
+      (selectionChange)="changeLang($event)"
+      name="selectedLanguageCode1"
+    >
+      <mat-option *ngFor="let l of supportedLanguages" [value]="l.code">{{
+        l.title
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>

@@ -1,0 +1,65 @@
+<div class="outer-container">
+    <div class="side-content">
+        <div class="upper-bubble"></div>
+        <div class="side-info">
+            <h3>Have something to share ?</h3>
+            <h1>Take this</h1>
+            <h1>Quick survey</h1>
+            <button><span>Click Here</span> <svg xmlns="http://www.w3.org/2000/svg" width="32.847" height="11.66" viewBox="0 0 32.847 11.66">
+                <path id="Union_50" data-name="Union 50" d="M3733.806-6323.663l-.83-.811,3.835-3.766h-29.6v-1.8h29.664l-1.431-1.409c-.809-.8-1.573-1.549-2.232-2.2l-.24-.233,1.159-1.123.227.223c.685.672,1.723,1.695,2.73,2.685l2.731,2.687.239.234-5.93,5.832Z" transform="translate(-3707.214 6335)" fill="white"/>
+              </svg>
+              </button>
+        </div>
+        <div class="bg-image">
+            
+            <img src="../../../assets/images/Group 54018.svg"/>
+        </div>
+       
+    </div>
+    <div class="menu">
+       
+        <div class="post-nav">
+            <!-- <ul class="nav-links">   
+                <li id="header">My Complaints &nbsp; &nbsp;</li>
+                <li id="vertical-topline">|</li>
+
+                <li class="nav-link"><a routerLink ="#" routerLinkActive="active-link">Open</a></li>
+                <li class="nav-link"><a routerLink ="">In Process</a></li>
+                <li class="nav-link"><a routerLink ="">Complete</a></li>
+                <li class="nav-link"><a routerLink ="">Declined</a></li>
+             </ul> -->
+             <div class="nav-links">   
+                <a id="header">My Complaints &nbsp; &nbsp;</a>
+                <a id="vertical-topline"></a>
+              
+                <a class="nav-link"  routerLink ="/" routerLinkActive="active" >Open</a>
+               <a class="nav-link" routerLink ="#" routerLinkActive="active">In Process</a>
+               <a class="nav-link" routerLink ="#" routerLinkActive="active">Complete</a>
+               <a class="nav-link" routerLink ="#" routerLinkActive="active">Declined</a>
+             </div>
+        </div>
+    </div>
+    <div class="info-cards"  >
+        <div class="icard" *ngFor="let item of complaints">
+            <app-mycomplaint-info-card [status]="item.status" [complaintId]="item.complaintId" [complaintTitle]="item.complaintTitle" [daysBack]="item.daysBack" 
+            [amount]="item.amount">
+
+            </app-mycomplaint-info-card>
+        </div>
+        
+    </div>
+    <div class="links"> 
+        <p style="margin-left: 0.5rem;padding-top:1.4rem">Important Links</p>
+        <div class="link-items">
+            <div class="link-items-left">
+
+                <app-mycomplaint-linkcard [content]="'Holiday Season Scam Prevention Tips'"></app-mycomplaint-linkcard>
+            </div>  
+         
+        <app-mycomplaint-linkcard [content]=" 'Instructions for Submitting Your Complaint' "></app-mycomplaint-linkcard>
+        </div>
+        
+    </div>
+       
+    
+</div>
